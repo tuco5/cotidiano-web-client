@@ -26,6 +26,8 @@ module.exports = {
         800: '#323a4a',
         900: '#1d222c',
       },
+      white: '#fff',
+      black: '#000',
     },
   },
   plugins: [],
