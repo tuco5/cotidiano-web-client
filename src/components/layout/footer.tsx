@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <nav>Footer</nav>;
+  return <footer className=" bg-gray-900">Footer</footer>;
 }

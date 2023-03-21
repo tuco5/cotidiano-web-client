@@ -1,3 +1,3 @@
 export default function Navbar() {
-  return <nav>Navigation</nav>;
+  return <nav className="absolute top-0 left-0 h-12 w-full">Navigation</nav>;
 }

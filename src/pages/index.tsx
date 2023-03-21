@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Main page</main>
+      <main className="flex h-screen items-center justify-center bg-gray-800">Main page</main>
     </>
   );
 }
