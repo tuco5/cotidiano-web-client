@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Home() {
+export default function Catalog() {
   return (
     <>
       <Head>
@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className="flex h-screen items-center justify-center bg-gray-800 text-white">
-        Main page
+        Catalog
       </main>
     </>
   );
