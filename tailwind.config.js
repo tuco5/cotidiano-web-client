@@ -12,10 +12,20 @@ module.exports = {
           '0%': {transform: 'translateY(1rem)', opacity: '0'},
           '100%': {transform: 'translateY(0)', opacity: '1'},
         },
+        'move-right': {
+          '0%': {transform: 'translateX(-1rem)', opacity: '0'},
+          '100%': {transform: 'translateX(0)', opacity: '1'},
+        },
+        'move-left': {
+          '0%': {transform: 'translateX(1rem)', opacity: '0'},
+          '100%': {transform: 'translateX(0)', opacity: '1'},
+        },
       },
       animation: {
-        write: 'write 1s ease-in .6s backwards',
+        write: 'write 1.5s ease-in .6s backwards',
         'move-top': 'move-top 0.5s ease-out .1s backwards',
+        'move-right': 'move-right 0.8s ease-out',
+        'move-left': 'move-left 0.8s ease-out',
       },
     },
     colors: {
