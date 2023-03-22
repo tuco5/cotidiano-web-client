@@ -44,6 +44,10 @@ module.exports = {
       white: '#fff',
       black: '#000',
     },
+    backgroundImage: {
+      'hover-item':
+        'linear-gradient(120deg,transparent 0%, transparent 50%, #bc4e9c 50%, #f80759 100%)',
+    },
   },
   plugins: [],
 };
