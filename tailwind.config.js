@@ -2,11 +2,26 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        write: {
+          '0%': {maxWidth: '0'},
+          '100%': {maxWidth: '1000px'},
+        },
+        'move-top': {
+          '0%': {transform: 'translateY(1rem)', opacity: '0'},
+          '100%': {transform: 'translateY(0)', opacity: '1'},
+        },
+      },
+      animation: {
+        write: 'write 1s ease-in .6s backwards',
+        'move-top': 'move-top 0.5s ease-out .1s backwards',
+      },
+    },
     colors: {
       primary: {
         100: '#eef3fd',
-        200: '#c0d3f8',
+        200: '#abb4d0',
         300: '#92b3f3',
         400: '#6493ee',
         500: '#3673e9',

@@ -1,4 +1,4 @@
-import Logo from '@/components/logo';
+import Logo from '@/components/layout/logo';
 import Menu from './menu';
 
 export default function Navbar() {

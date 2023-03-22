@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Portal from '@/components/hoc/portal';
 
 interface PanelProps {
   side: 'left' | 'right';
@@ -8,7 +9,7 @@ interface PanelProps {
 }
 export default function Panel({side, onClose, isActive, children}: PanelProps) {
   return (
-    <>
+    <Portal>
       <div
         onClick={onClose}
         role="button"
@@ -16,10 +17,10 @@ export default function Panel({side, onClose, isActive, children}: PanelProps) {
           side === 'right'
             ? isActive
               ? 'left-0 opacity-50'
-              : '-left-full opacity-0'
+              : '-left-full  w-0 opacity-0'
             : isActive
             ? 'right-0 opacity-50'
-            : '-right-full opacity-0'
+            : '-right-full  w-0 opacity-0'
         }`}
       ></div>
       <div
@@ -27,10 +28,10 @@ export default function Panel({side, onClose, isActive, children}: PanelProps) {
           side === 'left'
             ? isActive
               ? 'left-0'
-              : '-left-full'
+              : '-left-full  w-0'
             : isActive
             ? 'right-0'
-            : '-right-full'
+            : '-right-full  w-0'
         }`}
       >
         <div className="relative flex h-full w-full flex-col">
@@ -44,6 +45,6 @@ export default function Panel({side, onClose, isActive, children}: PanelProps) {
           <div className="h-full w-full border-t p-2">{children}</div>
         </div>
       </div>
-    </>
+    </Portal>
   );
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "label": "inicio",
+    "href": "/"
+  },
+  {
+    "id": 1,
+    "label": "propiedades",
+    "href": "/propiedades"
+  },
+  {
+    "id": 2,
+    "label": "contacto",
+    "href": "/contacto"
+  }
+]
