@@ -6,7 +6,7 @@ export default function Menu() {
   const [isActive, setIsActive] = useState(false);
   return (
     <>
-      <MenuButton onClick={() => setIsActive(prevState => !prevState)} />
+      <MenuButton onClick={() => setIsActive(true)} />
       <MenuPanel isActive={isActive} onClose={() => setIsActive(false)} />
     </>
   );
