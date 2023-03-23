@@ -1,11 +1,15 @@
+import type {AppProps} from 'next/app';
+import ProvidersTree from '@/providers/ProvidersTree';
 import Layout from '@/components/layout';
 import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({Component, pageProps}: AppProps) {
+  console.log(pageProps);
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ProvidersTree>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ProvidersTree>
   );
 }

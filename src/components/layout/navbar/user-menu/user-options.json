@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "label": "perfil",
+    "href": "/profile"
+  },
+  {
+    "id": 1,
+    "label": "favoritos",
+    "href": "/favorites"
+  },
+  {
+    "id": 2,
+    "label": "apartado",
+    "href": "/save"
+  },
+  {
+    "id": 3,
+    "label": "recomiendanos",
+    "href": "/share"
+  }
+]
