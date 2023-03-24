@@ -1,5 +1,5 @@
 import type {NextApiRequest, NextApiResponse} from 'next';
-import {connectMongo, disconnectMongo} from '@/lib/connect-mongo';
+import {connectMongo, disconnectMongo} from '@/lib/mongoose';
 import {User, IUser} from '@/models/User';
 
 type Data = {

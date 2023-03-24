@@ -6,6 +6,7 @@ import UserPanel from './user-panel';
 export default function UserButton() {
   const [isActive, setIsActive] = useState(false);
   const {data: session} = useSession();
+  console.log(session);
 
   return (
     <>
