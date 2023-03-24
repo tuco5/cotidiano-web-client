@@ -1,0 +1,16 @@
+### Create a new user
+POST http://localhost:3000/api/users
+content-type: application/json
+
+{
+  "name":"tudor1",
+  "email": "tudortest1@test.com"
+}
+
+### Get all users
+GET http://localhost:3000/api/users
+content-type: application/json
+
+### Get user by email
+GET http://localhost:3000/api/users/641cf33fbfdacb6082d17b53
+content-type: application/json
