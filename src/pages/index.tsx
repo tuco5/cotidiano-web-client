@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Hero from '@/components/hero';
 
 export default function Home() {
   return (
@@ -12,8 +13,8 @@ export default function Home() {
         <title>Cotidiano | Home</title>
       </Head>
 
-      <main className="flex h-screen items-center justify-center bg-gray-800 text-white">
-        Main page
+      <main className="flex h-screen items-center justify-center text-white">
+        <Hero />
       </main>
     </>
   );

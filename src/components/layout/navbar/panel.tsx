@@ -10,7 +10,7 @@ interface PanelProps {
 export default function Panel({side, onClose, isActive = false, children}: PanelProps) {
   return (
     <Portal>
-      {/* BACKGROUND */}
+      {/* BACKGDROP */}
       <div
         onClick={onClose}
         role="button"

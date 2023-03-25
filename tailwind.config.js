@@ -27,6 +27,13 @@ module.exports = {
         'move-right': 'move-right 0.8s ease-out',
         'move-left': 'move-left 0.8s ease-out',
       },
+      backgroundSize: {
+        'size-200': '200% 200%',
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
+      },
     },
     colors: {
       primary: {
@@ -57,6 +64,11 @@ module.exports = {
     backgroundImage: {
       'hover-item':
         'linear-gradient(120deg,transparent 0%, transparent 50%, #bc4e9c 50%, #f80759 100%)',
+      celestial: 'linear-gradient(to top, #C33764, #1D2671)',
+      instagram: 'linear-gradient(to left, #475268 50%, #833ab4 50%, #fd1d1d, #fcb045)',
+      facebook: 'linear-gradient(to left, #475268 50%, #00c6ff 50%, #0072ff)',
+      tiktok: 'linear-gradient(to left, #475268 50%, #69C9D0 50%, #EE1D52)',
+      whatsapp: 'linear-gradient(to left, #475268 50%, #25D366 50%)',
     },
   },
   plugins: [],
