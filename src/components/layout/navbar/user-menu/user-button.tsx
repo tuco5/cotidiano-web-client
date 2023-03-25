@@ -14,7 +14,7 @@ export default function UserButton() {
         onClick={() => setIsActive(true)}
         className="h-full overflow-hidden rounded-full bg-white"
       >
-        <Image src={session!.user?.image || ''} alt="my profile image" width={32} height={32} />
+        <Image src={session!.user?.picture || ''} alt="my profile image" width={32} height={32} />
       </button>
 
       <UserPanel isActive={isActive} onClose={() => setIsActive(false)} />
