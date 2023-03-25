@@ -31,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     switch (method) {
       case 'GET':
         await getUser(query.id, res);
-        return;
+        break;
 
       default:
         res.setHeader('Allow', ['GET']);
