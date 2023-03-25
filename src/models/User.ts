@@ -1,12 +1,14 @@
-import {Schema, model, models} from 'mongoose';
+import {Schema, model, models, Model} from 'mongoose';
 
-export interface IUser {
+export interface UserDoc {
+  id: string;
   name: string;
   email: string;
-  avatar?: string;
+  picture?: string;
+  role: 'user' | 'admin';
 }
 
-const userSchema = new Schema<IUser>(
+const userSchema = new Schema<UserDoc>(
   {
     name: {
       type: String,
@@ -15,8 +17,14 @@ const userSchema = new Schema<IUser>(
     email: {
       type: String,
       required: true,
+      unique: true,
     },
-    avatar: String,
+    picture: String,
+    role: {
+      type: String,
+      enum: ['user', 'admin'],
+      default: 'user',
+    },
   },
   {
     toJSON: {
@@ -30,6 +38,6 @@ const userSchema = new Schema<IUser>(
 
 userSchema.set('versionKey', 'version');
 
-const User = models.User || model<IUser>('User', userSchema);
+const User = models.User || model<UserDoc>('User', userSchema);
 
 export {User};

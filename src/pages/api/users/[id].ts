@@ -1,10 +1,12 @@
 import type {NextApiRequest, NextApiResponse} from 'next';
-import {connectMongo, disconnectMongo} from '@/lib/mongoose';
-import {User, IUser} from '@/models/User';
+import {getServerSession} from 'next-auth/next';
+import {authOptions} from '@/pages/api/auth/[...nextauth]';
+import {connectMongo} from '@/lib/mongoose';
+import {User, UserDoc} from '@/models/User';
 
 type Data = {
   message: string;
-  data?: IUser;
+  data?: UserDoc;
 };
 
 /**
@@ -12,22 +14,41 @@ type Data = {
  * @param {import('next').NextApiResponse} res
  */
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const {id} = req.query;
+  const session = await getServerSession(req, res, authOptions);
+  const {query, method} = req;
+
+  if (!session) {
+    res.status(401).json({message: 'You must be logged in.'});
+  }
+
+  if (session?.user.id !== query.id && session?.user.role !== 'admin') {
+    res.status(403).json({message: 'Access denied'});
+  }
 
   try {
-    console.log('CONNECTING TO MONGO');
     await connectMongo();
-    console.log('CONNECTED TO MONGO');
 
-    const user = await User.findOne({id});
+    switch (method) {
+      case 'GET':
+        await getUser(query.id, res);
+        return;
 
-    if (!user) {
-      res.status(404).json({message: 'Not Found'});
+      default:
+        res.setHeader('Allow', ['GET']);
+        res.status(405).end(`Method ${method} Not Allowed`);
     }
-
-    disconnectMongo();
-    res.status(200).json({message: 'success', data: user!});
   } catch (err) {
     console.error(err);
   }
+}
+
+/* READ | GET */
+async function getUser(id: string | string[] | undefined, res: NextApiResponse) {
+  const user = await User.findById(id);
+
+  if (!user) {
+    res.status(404).json({message: 'Not Found'});
+  }
+
+  res.status(200).json({message: 'success', data: user!});
 }
