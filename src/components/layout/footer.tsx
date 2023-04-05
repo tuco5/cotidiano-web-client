@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="flex h-32 flex-col items-center justify-between bg-gray-900 p-2 text-sm text-white">
       <p>Siguenos:</p>
-      <div className="flex h-full w-[250px] max-w-xs justify-between p-3 ">
+      <div className="flex h-full w-[220px] max-w-xs justify-between p-3 ">
         <SocialmediaButton
           variant="facebook"
           href="https://www.facebook.com/profile.php?id=100063645515254"

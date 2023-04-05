@@ -13,6 +13,8 @@ export default function Logo() {
         height={34}
         alt="logo"
         className="animate-move-top"
+        priority
+        loading="eager"
       />
       <div className="-translate-x-2 overflow-hidden">
         <p className="h-fit w-fit translate-y-0.5 animate-write">otidiano</p>

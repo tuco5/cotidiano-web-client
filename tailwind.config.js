@@ -64,7 +64,7 @@ module.exports = {
     backgroundImage: {
       'hover-item':
         'linear-gradient(120deg,transparent 0%, transparent 50%, #bc4e9c 50%, #f80759 100%)',
-      celestial: 'linear-gradient(to top, #C33764, #1D2671)',
+      royal: 'linear-gradient(to top, #141E30, #243B55)',
       instagram: 'linear-gradient(to left, #475268 50%, #833ab4 50%, #fd1d1d, #fcb045)',
       facebook: 'linear-gradient(to left, #475268 50%, #00c6ff 50%, #0072ff)',
       tiktok: 'linear-gradient(to left, #475268 50%, #69C9D0 50%, #EE1D52)',

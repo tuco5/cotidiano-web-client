@@ -13,7 +13,7 @@ export function SocialmediaButton({href, variant}: SocialmediaButtonProps) {
   return (
     <Link
       href={href}
-      className="relative flex h-7 w-7 overflow-hidden rounded-full"
+      className="relative flex h-8 w-8 overflow-hidden rounded-full"
       target="_blank"
     >
       <Icon variant={variant} />
