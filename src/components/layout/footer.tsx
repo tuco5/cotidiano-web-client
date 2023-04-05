@@ -1,4 +1,4 @@
-import {SocialmediaButton} from '../buttons';
+import {SocialmediaButton} from '../interface';
 
 export default function Footer() {
   return (

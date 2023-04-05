@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import FacebookIcon from '../../../public/icons/facebook.svg';
-import InstagramIcon from '../../../public/icons/instagram.svg';
-import TiktokIcon from '../../../public/icons/tiktok.svg';
-import WhatsappIcon from '../../../public/icons/whatsapp.svg';
+import FacebookIcon from '../../../../public/icons/facebook.svg';
+import InstagramIcon from '../../../../public/icons/instagram.svg';
+import TiktokIcon from '../../../../public/icons/tiktok.svg';
+import WhatsappIcon from '../../../../public/icons/whatsapp.svg';
 
 interface SocialmediaButtonProps {
   href: string;
