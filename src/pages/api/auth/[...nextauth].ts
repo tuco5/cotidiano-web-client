@@ -14,7 +14,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
 
-  adapter: MongoDBAdapter(clientPromise),
+  adapter: MongoDBAdapter(clientPromise, {databaseName: process.env.DB_NAME}),
   session: {
     strategy: 'database',
     maxAge: 7 * 24 * 60 * 60,
