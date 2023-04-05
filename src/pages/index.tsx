@@ -34,6 +34,7 @@ export default function Home() {
         <Gradient variant="royal" opacity={0.55} />
         <Carousel className="-z-10 h-screen w-screen" interval={4000}>
           {pictures.map((picture, i) => (
+            // TODO: Optimize images
             <Image
               key={i}
               src={picture}
