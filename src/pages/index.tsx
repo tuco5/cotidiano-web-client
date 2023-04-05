@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import {useWindowSize} from '@/hooks/useWindowSize';
-import {Carousel} from '@/components/interface';
+import {Button, Carousel} from '@/components/interface';
 import {tabLand} from '@/constants/breakpoints';
 import imageOne from '../../public/images/home/guadalajara-1.jpg';
 import imageTwo from '../../public/images/home/guadalajara-2.jpg';
@@ -10,6 +10,7 @@ import imageFour from '../../public/images/home/guadalajara-4.jpg';
 import imageFive from '../../public/images/home/guadalajara-5.jpg';
 import imageSix from '../../public/images/home/guadalajara-6.jpg';
 import {Gradient} from '@/components/utils/gradient';
+import Link from 'next/link';
 
 const desktopPictures = [imageOne, imageTwo, imageThree];
 const mobilePictures = [imageFour, imageFive, imageSix];
@@ -43,6 +44,14 @@ export default function Home() {
             />
           ))}
         </Carousel>
+        <div className="absolute left-1/2 top-1/2 flex w-3/4 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center uppercase">
+          <h1 className="text-5xl">Bienes raices</h1>
+          <p className="mt-6 text-2xl">Guadalajara</p>
+          <Button variant="main" className="mt-10">
+            <Link href="/catalog">Explorar</Link>
+          </Button>
+          <p className="mt-20 normal-case">Contrata un asesor personal GRATIS</p>
+        </div>
       </main>
     </>
   );

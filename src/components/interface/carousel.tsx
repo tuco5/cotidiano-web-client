@@ -21,7 +21,6 @@ export function Carousel({interval = 3000, children, className}: CarouselProps) 
     }
   }, []);
 
-  console.log(currentSlide);
   if (!Array.isArray(children)) return <div className={className}>{children}</div>;
 
   return (
