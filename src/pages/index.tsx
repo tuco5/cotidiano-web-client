@@ -44,13 +44,15 @@ export default function Home() {
             />
           ))}
         </Carousel>
-        <div className="absolute left-1/2 top-1/2 flex w-3/4 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center uppercase">
-          <h1 className="text-5xl">Bienes raices</h1>
-          <p className="mt-6 text-2xl">Guadalajara</p>
-          <Button variant="main" className="mt-10">
+        <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center uppercase">
+          <h1 className="text-5xl font-light md:text-6xl lg:text-8xl xl:text-9xl">Bienes raices</h1>
+          <p className="mt-6 text-2xl font-thin md:text-3xl lg:text-4xl xl:text-5xl">Guadalajara</p>
+          <Button variant="main" className="mt-10 md:text-xl lg:text-2xl">
             <Link href="/catalog">Explorar</Link>
           </Button>
-          <p className="mt-20 normal-case">Contrata un asesor personal GRATIS</p>
+          <p className="mt-20 font-light normal-case md:text-xl lg:text-2xl">
+            Contrata un asesor personal GRATIS
+          </p>
         </div>
       </main>
     </>
