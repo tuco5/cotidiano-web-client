@@ -10,11 +10,11 @@ interface PanelProps {
 export default function Panel({side, onClose, isActive = false, children}: PanelProps) {
   return (
     <Portal>
-      {/* BACKGROUND */}
+      {/* BACKGDROP */}
       <div
         onClick={onClose}
         role="button"
-        className={`fixed top-0 h-screen bg-black transition-all duration-300 ${
+        className={`fixed top-0 z-20 h-screen bg-black transition-all duration-300 ${
           side === 'right'
             ? isActive
               ? 'left-0 w-screen opacity-50'
@@ -29,7 +29,7 @@ export default function Panel({side, onClose, isActive = false, children}: Panel
 
       {/* PANEL */}
       <div
-        className={`fixed top-0 h-screen w-3/4 bg-white transition-all duration-300 ${
+        className={`fixed top-0 z-30 h-screen w-3/4 max-w-xs bg-white transition-all duration-300 ${
           side === 'left'
             ? isActive
               ? 'left-0'
