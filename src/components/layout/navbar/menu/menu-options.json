@@ -8,10 +8,5 @@
     "id": 1,
     "label": "catálogo",
     "href": "/catalog"
-  },
-  {
-    "id": 2,
-    "label": "contacto",
-    "href": "/contact"
   }
 ]
