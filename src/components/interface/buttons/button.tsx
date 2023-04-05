@@ -11,7 +11,7 @@ export function Button({children, variant, className, onClick}: ButtonProps) {
       onClick={onClick}
       className={`${className} ${
         variant === 'main' &&
-        'rounded-full border-2 bg-black bg-opacity-40 py-1 px-6 transition-all hover:-translate-y-1 hover:border-primary-500 hover:bg-primary-500 hover:shadow-[_2px_5px_10px_rgba(0,0,0,0.3)]'
+        'rounded-full bg-black bg-opacity-60 bg-hover-main-btn bg-[length:220%] py-1 px-6 transition-all duration-500 hover:-translate-y-0.5 hover:bg-right hover:text-black active:translate-y-0'
       }`}
     >
       {children}

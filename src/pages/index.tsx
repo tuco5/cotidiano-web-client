@@ -42,6 +42,7 @@ export default function Home() {
               fill
               style={{objectFit: 'cover'}}
               loading={i === 0 ? 'eager' : 'lazy'}
+              className="animate-zoom-in"
             />
           ))}
         </Carousel>

@@ -20,12 +20,17 @@ module.exports = {
           '0%': {transform: 'translateX(1rem)', opacity: '0'},
           '100%': {transform: 'translateX(0)', opacity: '1'},
         },
+        'zoom-in': {
+          '0%': {transform: 'scale(1.1)'},
+          '100%': {transform: 'scale(1)'},
+        },
       },
       animation: {
         write: 'write 1.5s ease-in .6s backwards',
         'move-top': 'move-top 0.5s ease-out .1s backwards',
         'move-right': 'move-right 0.8s ease-out',
         'move-left': 'move-left 0.8s ease-out',
+        'zoom-in': 'zoom-in 8s ease-in infinite alternate',
       },
       backgroundSize: {
         'size-200': '200% 200%',
@@ -64,6 +69,7 @@ module.exports = {
     backgroundImage: {
       'hover-item':
         'linear-gradient(120deg,transparent 0%, transparent 50%, #bc4e9c 50%, #f80759 100%)',
+      'hover-main-btn': 'linear-gradient(120deg,transparent 0%, transparent 50%, #fff 50%)',
       royal: 'linear-gradient(to top, #141E30, #243B55)',
       instagram: 'linear-gradient(to left, #475268 50%, #833ab4 50%, #fd1d1d, #fcb045)',
       facebook: 'linear-gradient(to left, #475268 50%, #00c6ff 50%, #0072ff)',
