@@ -1,4 +1,5 @@
-export const phone = 600;
-export const tabLand = 900;
-export const tabPort = 1200;
-export const bigDesktop = 1800;
+export const phone = 640;
+export const tabLand = 768;
+export const tabPort = 1024;
+export const dexktop = 1280;
+export const bigDesktop = 1536;
