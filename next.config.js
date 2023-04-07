@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['lh3.googleusercontent.com'],
+    domains: ['lh3.googleusercontent.com', 'images.unsplash.com'],
   },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
