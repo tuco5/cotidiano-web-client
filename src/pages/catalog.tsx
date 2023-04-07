@@ -4,13 +4,17 @@ import {Card} from '@/components/interface';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {useWindowSize} from '@/hooks/useWindowSize';
+import {tabPort} from '@/constants/breakpoints';
 
 export default function Catalog() {
+  const {width} = useWindowSize();
+
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: width < tabPort ? 1 : 3,
     slidesToScroll: 1,
   };
 
@@ -31,7 +35,7 @@ export default function Catalog() {
 
           <h2 className="w-full py-4 px-0.5 text-left text-5xl">Nuevas ofertas</h2>
 
-          <Slider className="mt-6 w-3/4" {...sliderSettings}>
+          <Slider className="mt-6 w-3/4 sm:w-11/12" {...sliderSettings}>
             <Card
               title="Casa bonita"
               location="Valle Real, Guadalajara"
