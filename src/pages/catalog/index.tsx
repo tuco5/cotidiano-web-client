@@ -33,31 +33,34 @@ export default function Catalog() {
         <div className="flex w-full max-w-5xl flex-col items-center">
           <div className="2-full block h-14 w-full">&nbsp;</div>
 
-          <h2 className="w-full py-4 px-0.5 text-left text-5xl">Nuevas ofertas</h2>
+          <h2 className="w-full py-4 px-2 text-left text-4xl">Nuevas ofertas</h2>
 
           <Slider className="mt-6 w-3/4 sm:w-11/12" {...sliderSettings}>
             <Card
+              id="123"
               title="Casa bonita"
               location="Valle Real, Guadalajara"
-              locationLink="#"
+              locationUrl="#"
               price={2500000}
               surface={120}
               picture="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
               type="venta"
             />
             <Card
+              id="234"
               title="Casa bonita"
               location="Valle Real, Guadalajara"
-              locationLink="#"
+              locationUrl="#"
               price={2500000}
               surface={120}
               picture="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
               type="venta"
             />
             <Card
+              id="345"
               title="Casa bonita"
               location="Valle Real, Guadalajara"
-              locationLink="#"
+              locationUrl="#"
               price={2500000}
               surface={120}
               picture="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
