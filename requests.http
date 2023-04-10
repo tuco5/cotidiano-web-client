@@ -27,3 +27,15 @@ content-type: application/json
   "surface":200,
   "picture":"https://unsplash.com/es/fotos/TiVPTYCG_3E"
 }
+
+### Create update Estate
+PATCH http://localhost:3000/api/estate/643431cbe3ea3031477b419c
+content-type: application/json
+
+{
+  "title":"Casa MUY bonita"
+}
+
+### Find by id Estate
+GET http://localhost:3000/api/estate/643431cbe3ea3031477b419c
+content-type: application/json
