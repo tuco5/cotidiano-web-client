@@ -1,7 +1,41 @@
+#########
+# USERS
+#########
+
 ### Get all users
 GET http://localhost:3000/api/users
 content-type: application/json
 
 ### Get user by id
 GET http://localhost:3000/api/users/641dc59a0f3fa744cee625f0
+content-type: application/json
+
+#########
+# ESTATE
+#########
+
+### Create new Estate
+POST http://localhost:3000/api/estate/new
+content-type: application/json
+
+{
+  "title":"Casa bonita",
+  "location":"Valle Real",
+  "locationUrl":"https://goo.gl/maps/k95fkUJRkzN39RDEA",
+  "price":1000000,
+  "type":"venta",
+  "surface":200,
+  "picture":"https://unsplash.com/es/fotos/TiVPTYCG_3E"
+}
+
+### Create update Estate
+PATCH http://localhost:3000/api/estate/643431cbe3ea3031477b419c
+content-type: application/json
+
+{
+  "title":"Casa MUY bonita"
+}
+
+### Find by id Estate
+GET http://localhost:3000/api/estate/643431cbe3ea3031477b419c
 content-type: application/json
