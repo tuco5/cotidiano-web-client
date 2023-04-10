@@ -1,7 +1,6 @@
-import {Schema, model, models} from 'mongoose';
+import {Model, Schema, model, models} from 'mongoose';
 
-export interface EstateDoc {
-  id: string;
+export interface EstateI {
   title: string;
   location: string;
   locationUrl: string;
@@ -11,7 +10,7 @@ export interface EstateDoc {
   picture: string;
 }
 
-const estateSchema = new Schema<EstateDoc>(
+const estateSchema = new Schema<EstateI, Model<EstateI>>(
   {
     title: {
       type: String,
@@ -52,9 +51,6 @@ const estateSchema = new Schema<EstateDoc>(
     },
   }
 );
-
 estateSchema.set('versionKey', 'version');
 
-const Estate = models.Estate || model<EstateDoc>('Estate', estateSchema);
-
-export {Estate};
+export const Estate = models.Estate || model<EstateI>('Estate', estateSchema);

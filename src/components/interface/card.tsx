@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationIcon from '../../../public/icons/location.svg';
-import {EstateDoc} from '@/models/Estate';
+import {EstateI} from '@/models/Estate';
 
 let dollarUS = Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
 });
 
-interface CardProps extends EstateDoc {}
+interface CardProps extends EstateI {
+  id: string;
+}
 
 export function Card({title, location, locationUrl, price, type, surface, picture, id}: CardProps) {
   return (

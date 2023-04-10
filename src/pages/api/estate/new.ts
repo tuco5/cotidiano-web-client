@@ -1,12 +1,10 @@
 import type {NextApiRequest, NextApiResponse} from 'next';
-import {connectMongo} from '@/lib/mongoose';
-import {authOptions} from '@/pages/api/auth/[...nextauth]';
-import {getServerSession} from 'next-auth/next';
-import {Estate, EstateDoc} from '@/models/Estate';
+import connectMongo from '@/lib/mongoose';
+import {EstateI, Estate} from '@/models/Estate';
 
 type Data = {
   message: string;
-  data?: EstateDoc[];
+  data?: EstateI;
 };
 
 /**
@@ -14,24 +12,17 @@ type Data = {
  * @param {import('next').NextApiResponse} res
  */
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  if (req.method !== 'POST') return {};
+  const {method, body} = req;
+  if (method === 'POST') {
+    const estate = new Estate(body);
 
-  const session = await getServerSession(req, res, authOptions);
+    try {
+      await connectMongo();
+      await estate.save();
 
-  if (!session) {
-    res.status(401).json({message: 'You must be logged in.'});
-  }
-
-  if (session?.user.role !== 'admin') {
-    res.status(403).json({message: 'Access denied'});
-  }
-
-  try {
-    await connectMongo();
-
-    const users = await Estate.find({});
-    res.status(200).json({message: 'success', data: users});
-  } catch (err) {
-    console.error(err);
+      res.status(201).json({message: 'new estate create successfully', data: estate});
+    } catch (err) {
+      console.error(err);
+    }
   }
 }

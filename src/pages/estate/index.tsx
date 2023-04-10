@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import {useWindowSize} from '@/hooks/useWindowSize';
 import {tabPort} from '@/constants/breakpoints';
 
-export default function Catalog() {
+export default function Estate() {
   const {width} = useWindowSize();
 
   const sliderSettings = {
