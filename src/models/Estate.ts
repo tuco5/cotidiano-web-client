@@ -1,6 +1,7 @@
 import {Model, Schema, model, models} from 'mongoose';
 
 export interface EstateI {
+  id: string;
   title: string;
   location: string;
   locationUrl: string;
@@ -8,9 +9,10 @@ export interface EstateI {
   type: 'venta' | 'renta';
   surface: number;
   picture: string;
+  status: 'vendida' | 'disponible' | 'apartada';
 }
 
-const estateSchema = new Schema<EstateI, Model<EstateI>>(
+const estateSchema = new Schema(
   {
     title: {
       type: String,
@@ -41,11 +43,16 @@ const estateSchema = new Schema<EstateI, Model<EstateI>>(
       type: String,
       required: true,
     },
+    status: {
+      type: String,
+      enum: ['vendida', 'disponible', 'apartada'],
+      default: 'disponible',
+    },
   },
   {
     toJSON: {
       transform(doc, ret) {
-        ret.id = ret._id;
+        ret.id = ret._id.toHexString();
         delete ret._id;
       },
     },
@@ -53,4 +60,4 @@ const estateSchema = new Schema<EstateI, Model<EstateI>>(
 );
 estateSchema.set('versionKey', 'version');
 
-export const Estate = models.Estate || model<EstateI>('Estate', estateSchema);
+export const Estate = models.Estate || model('Estate', estateSchema);

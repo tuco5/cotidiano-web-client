@@ -16,16 +16,16 @@ export const config = {
 };
 
 function middlewareTestOne(request: NextRequest) {
-  console.log('middleware 1');
+  // console.log('middleware 1');
   return NextResponse.next();
 }
 
 function middlewareTestTwo(request: NextRequest) {
-  console.log('middleware 2');
+  // console.log('middleware 2');
   return NextResponse.next();
 }
 
 function middlewareTestThree(request: NextRequest) {
-  console.log('middleware 3');
+  // console.log('middleware 3');
   return NextResponse.next();
 }

@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router';
 
-export default function Estate() {
+export default function DetailEstatePage() {
   const router = useRouter();
   const {id} = router.query;
 

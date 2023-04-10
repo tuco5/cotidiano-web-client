@@ -15,7 +15,7 @@ import Link from 'next/link';
 const desktopPictures = [imageOne, imageTwo, imageThree];
 const mobilePictures = [imageFour, imageFive, imageSix];
 
-export default function Home() {
+export default function HomePage() {
   const {width} = useWindowSize();
   const pictures = width < tabLand ? mobilePictures : desktopPictures;
 

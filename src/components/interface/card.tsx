@@ -12,7 +12,17 @@ interface CardProps extends EstateI {
   id: string;
 }
 
-export function Card({title, location, locationUrl, price, type, surface, picture, id}: CardProps) {
+export function Card({
+  title,
+  location,
+  locationUrl,
+  price,
+  type,
+  surface,
+  picture,
+  id,
+  status,
+}: CardProps) {
   return (
     <div className="mx-auto h-80 w-min overflow-hidden bg-gray-900">
       <Link href={`/estate/${id}`}>
