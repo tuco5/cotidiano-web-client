@@ -42,7 +42,7 @@ export default function EstatePage({data}: EstatePageProps) {
 
           <Slider className="mt-6 w-3/4 sm:w-11/12" {...sliderSettings}>
             {data.map(
-              ({id, title, location, locationUrl, price, type, surface, picture, status}) => {
+              ({id, title, location, locationUrl, price, type, surface, pictures, status}) => {
                 if (status === 'disponible')
                   return (
                     <Card
@@ -53,7 +53,9 @@ export default function EstatePage({data}: EstatePageProps) {
                       locationUrl={locationUrl}
                       price={price}
                       surface={surface}
-                      picture="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      pictures={[
+                        'https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                      ]}
                       type={type}
                       status={status}
                     />
