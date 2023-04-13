@@ -21,10 +21,6 @@ export default function EstatePage({data}: EstatePageProps) {
     infinite: true,
     slidesToShow: width < tabPort ? 1 : 3,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 6000,
-    autoplaySpeed: 6000,
-    cssEase: 'linear',
   };
 
   return (
