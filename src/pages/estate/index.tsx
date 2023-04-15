@@ -35,9 +35,7 @@ export default function EstatePage({data}: EstatePageProps) {
       </Head>
 
       <main className="flex min-h-screen justify-center bg-gray-800 text-white">
-        <div className="flex w-full max-w-5xl flex-col items-center">
-          <div className="2-full block h-14 w-full">&nbsp;</div>
-
+        <div className="mt-14 flex w-full max-w-5xl flex-col items-center">
           <h2 className="w-full py-4 px-2 text-left text-4xl">Nuevas ofertas</h2>
 
           <Slider className="mt-6 w-3/4 sm:w-11/12" {...sliderSettings}>
@@ -53,9 +51,7 @@ export default function EstatePage({data}: EstatePageProps) {
                       locationUrl={locationUrl}
                       price={price}
                       surface={surface}
-                      pictures={[
-                        'https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-                      ]}
+                      pictures={pictures}
                       type={type}
                       status={status}
                     />

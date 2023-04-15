@@ -53,6 +53,11 @@ const estateSchema = new Schema(
       enum: ['vendida', 'disponible', 'apartada'],
       default: 'disponible',
     },
+    description: String,
+    rooms: String,
+    baths: String,
+    parking: String,
+    jacuzzi: String,
   },
   {
     toJSON: {
