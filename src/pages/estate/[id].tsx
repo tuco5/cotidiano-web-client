@@ -2,7 +2,7 @@ import {GetServerSidePropsContext} from 'next';
 import Link from 'next/link';
 import connectMongo from '@/lib/mongoose';
 import {EstateI, Estate} from '@/models/Estate';
-import {Button, NavCarousel} from '@/components/interface';
+import {Badge, Button, NavCarousel} from '@/components/interface';
 import {dollarUS} from '@/utils/number-format';
 import GoBackIcon from '/public/icons/go-back-arrow.svg';
 import BedRoom from '/public/icons/bedroom.svg';
@@ -26,23 +26,24 @@ export default function DetailEstatePage({data}: EstatePageProps) {
           <div className="relative flex w-full justify-center bg-gray-900 bg-opacity-60 px-4 py-2 text-center">
             <Link
               href="/estate"
-              className="absolute left-5 top-1/4 h-7 w-7 rounded-full border-2 border-white text-white"
+              className="absolute left-5 top-1/4 h-5 w-5 rounded-full border-2 border-white text-white sm:h-7 sm:w-7"
             >
               <GoBackIcon />
             </Link>
-            <h2 className=" text-3xl uppercase">en {data.type}</h2>
+            <h2 className="text-xl uppercase sm:text-2xl md:text-3xl">en {data.type}</h2>
           </div>
         </div>
 
         {/* CAROUSEL */}
-        <NavCarousel slides={data.pictures} className="max-w-[800px]" />
+        <NavCarousel slides={data.pictures} className="w-full max-w-[800px]" />
 
         {/* DETAILS */}
         <div className="flex w-full max-w-[800px] flex-col items-center">
           {/* MAIN */}
-          <div className="mb-2 flex flex-col items-center py-2">
-            <p className="text-xl capitalize">{data.title}</p>
-            <p className="text-3xl">{dollarUS.format(data.price)}</p>
+          <Badge status={data.status} className="mr-2 self-end" />
+          <div className="mb-2 flex flex-col items-center py-2 sm:mb-4 md:mb-6">
+            <p className="text-xl capitalize sm:text-2xl md:text-3xl">{data.title}</p>
+            <p className="text-3xl sm:text-4xl md:text-5xl">{dollarUS.format(data.price)}</p>
           </div>
 
           {/* ICONS */}
@@ -93,16 +94,6 @@ export default function DetailEstatePage({data}: EstatePageProps) {
               <Button variant="cta">
                 <Link href="/">Apartar</Link>
               </Button>
-            </div>
-          )}
-          {data.status === 'apartada' && (
-            <div className="my-4 rounded-full bg-[#FBD786] py-1 px-6">
-              <p>Apartada</p>
-            </div>
-          )}
-          {data.status === 'vendida' && (
-            <div className="my-4 rounded-full bg-[#f7797d] py-1 px-6">
-              <p>Vendida</p>
             </div>
           )}
 

@@ -25,12 +25,12 @@ export function MyCarousel({interval = 3000, children, className}: CarouselProps
 
   return (
     <div className={className}>
-      <div className="relative h-full w-full overflow-hidden">
+      <div className="h-full w-full overflow-hidden">
         {children.map((slide, i) => {
           return (
             <div
               key={i}
-              className={`h-full w-full transition-all duration-1000 ${
+              className={`relative h-full w-full transition-all duration-1000 ${
                 i === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             >

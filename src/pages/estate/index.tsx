@@ -39,8 +39,11 @@ export default function EstatePage({data}: EstatePageProps) {
           <h2 className="w-full py-4 px-2 text-left text-4xl">Nuevas ofertas</h2>
 
           <Slider className="mt-6 w-3/4 sm:w-11/12" {...sliderSettings}>
-            {data.map(
-              ({id, title, location, locationUrl, price, type, surface, pictures, status}) => {
+            {data?.map(
+              (
+                {id, title, location, locationUrl, price, type, surface, pictures, status},
+                index
+              ) => {
                 if (status === 'disponible')
                   return (
                     <Card
@@ -54,6 +57,7 @@ export default function EstatePage({data}: EstatePageProps) {
                       pictures={pictures}
                       type={type}
                       status={status}
+                      priority={index === 0}
                     />
                   );
               }
