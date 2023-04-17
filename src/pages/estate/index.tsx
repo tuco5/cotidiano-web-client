@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {useWindowSize} from '@/hooks/useWindowSize';
 import {tabPort} from '@/constants/breakpoints';
-
+// hola
 interface EstatePageProps {
   data: EstateI[];
 }
