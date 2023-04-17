@@ -1,7 +1,6 @@
 #########
 # USERS
 #########
-
 ### Get all users
 GET http://localhost:3000/api/users
 content-type: application/json
@@ -13,29 +12,30 @@ content-type: application/json
 #########
 # ESTATE
 #########
-
 ### Create new Estate
 POST http://localhost:3000/api/estate/new
 content-type: application/json
 
 {
-  "title":"Casa bonita",
-  "location":"Valle Real",
+  "title":"Casa Cool",
+  "location":"Yupuramura",
   "locationUrl":"https://goo.gl/maps/k95fkUJRkzN39RDEA",
   "price":1000000,
   "type":"venta",
   "surface":200,
-  "picture":"https://unsplash.com/es/fotos/TiVPTYCG_3E"
+  "pictures":["https://res.cloudinary.com/cotidiano/image/upload/v1681313196/casabonita/wrfgaggqe3ujayhocca6.jpg","https://res.cloudinary.com/cotidiano/image/upload/v1681313066/gky7rtfijuxzq07vtxgg.jpg","https://res.cloudinary.com/cotidiano/image/upload/v1681308657/cld-sample-5.jpg","https://res.cloudinary.com/cotidiano/image/upload/v1681308656/cld-sample-3.jpg"],
+  "status":"disponible",
+  "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Eleifend quam adipiscing vitae proin. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Aenean vel elit scelerisque mauris pellentesque. Blandit libero volutpat sed cras ornare arcu dui vivamus. Diam donec adipiscing tristique risus nec feugiat in fermentum. Elit duis tristique sollicitudin nibh sit amet.",
+  "rooms":"4",
+  "baths":"2.5",
+  "garage":"3",
+  "jacuzzi":"1"
 }
 
-### Create update Estate
+### Update Estate
 PATCH http://localhost:3000/api/estate/643431cbe3ea3031477b419c
 content-type: application/json
 
 {
   "title":"Casa MUY bonita"
 }
-
-### Find by id Estate
-GET http://localhost:3000/api/estate/643431cbe3ea3031477b419c
-content-type: application/json

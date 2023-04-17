@@ -8,7 +8,7 @@ interface CarouselProps {
   children: React.ReactNode[] | React.ReactNode;
 }
 
-export function Carousel({interval = 3000, children, className}: CarouselProps) {
+export function MyCarousel({interval = 3000, children, className}: CarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {

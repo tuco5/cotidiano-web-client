@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import {useWindowSize} from '@/hooks/useWindowSize';
-import {Button, Carousel} from '@/components/interface';
+import {Button, MyCarousel} from '@/components/interface';
 import {tabLand} from '@/constants/breakpoints';
 import imageOne from '../../public/images/home/guadalajara-1.jpg';
 import imageTwo from '../../public/images/home/guadalajara-2.jpg';
@@ -32,7 +32,7 @@ export default function HomePage() {
 
       <main className="relative flex h-screen items-center justify-center text-white">
         <Gradient variant="royal" opacity={0.55} />
-        <Carousel className="-z-10 h-screen w-screen" interval={4000}>
+        <MyCarousel className="-z-10 h-screen w-screen" interval={4000}>
           {pictures.map((picture, i) => (
             // TODO: Optimize images
             <Image
@@ -45,7 +45,7 @@ export default function HomePage() {
               className="animate-zoom-in"
             />
           ))}
-        </Carousel>
+        </MyCarousel>
         <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center uppercase">
           <h1 className="text-5xl font-light md:text-6xl lg:text-8xl xl:text-9xl">Bienes raices</h1>
           <p className="mt-6 text-2xl font-thin md:text-3xl lg:text-4xl xl:text-5xl">Guadalajara</p>

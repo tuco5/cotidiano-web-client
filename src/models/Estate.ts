@@ -8,8 +8,13 @@ export interface EstateI {
   price: number;
   type: 'venta' | 'renta';
   surface: number;
-  picture: string;
+  pictures: string[];
   status: 'vendida' | 'disponible' | 'apartada';
+  description?: string;
+  rooms?: string;
+  baths?: string;
+  garage?: string;
+  jacuzzi?: string;
 }
 
 const estateSchema = new Schema(
@@ -39,8 +44,8 @@ const estateSchema = new Schema(
       type: Number,
       required: true,
     },
-    picture: {
-      type: String,
+    pictures: {
+      type: [String],
       required: true,
     },
     status: {
@@ -48,6 +53,11 @@ const estateSchema = new Schema(
       enum: ['vendida', 'disponible', 'apartada'],
       default: 'disponible',
     },
+    description: String,
+    rooms: String,
+    baths: String,
+    garage: String,
+    jacuzzi: String,
   },
   {
     toJSON: {

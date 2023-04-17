@@ -23,15 +23,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       console.error(err);
     }
   }
-
-  if (method === 'GET') {
-    try {
-      await connectMongo();
-      const estate = await Estate.findById(query.id);
-
-      res.status(200).json({message: `Success`, data: estate});
-    } catch (err) {
-      console.error(err);
-    }
-  }
 }
