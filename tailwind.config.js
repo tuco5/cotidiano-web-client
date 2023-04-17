@@ -65,6 +65,9 @@ module.exports = {
       },
       white: '#fff',
       black: '#000',
+      available: '#00F260',
+      deposit: '#FBD786',
+      sold: '#f7797d',
     },
     backgroundImage: {
       'hover-item':
