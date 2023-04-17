@@ -13,7 +13,7 @@ export interface EstateI {
   description?: string;
   rooms?: string;
   baths?: string;
-  parking?: string;
+  garage?: string;
   jacuzzi?: string;
 }
 
@@ -56,7 +56,7 @@ const estateSchema = new Schema(
     description: String,
     rooms: String,
     baths: String,
-    parking: String,
+    garage: String,
     jacuzzi: String,
   },
   {

@@ -28,7 +28,7 @@ content-type: application/json
   "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Eleifend quam adipiscing vitae proin. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Aenean vel elit scelerisque mauris pellentesque. Blandit libero volutpat sed cras ornare arcu dui vivamus. Diam donec adipiscing tristique risus nec feugiat in fermentum. Elit duis tristique sollicitudin nibh sit amet.",
   "rooms":"4",
   "baths":"2.5",
-  "parking":"3",
+  "garage":"3",
   "jacuzzi":"1"
 }
 

@@ -24,7 +24,7 @@ export function NavCarousel({className, slides}: NavCarouselProps) {
     <div className={className}>
       <Slider ref={slider1} arrows={false} asNavFor={nav2!} className="mb-1">
         {slides.map(slide => (
-          <div key={slide} className="relative  h-[50vw] w-full">
+          <div key={slide} className="relative  h-[50vw] max-h-[420px] w-full">
             <Image src={slide} alt="preview" fill style={{objectFit: 'cover'}} />
           </div>
         ))}
@@ -36,10 +36,10 @@ export function NavCarousel({className, slides}: NavCarouselProps) {
         swipeToSlide={true}
         focusOnSelect={true}
         arrows={false}
-        className=" w-[99vw]"
+        className=" w-[99%]"
       >
         {slides.map(slide => (
-          <div key={slide} className="relative flex h-[18vw] overflow-hidden">
+          <div key={slide} className="relative flex h-[18vw] max-h-[150px] overflow-hidden">
             <Image
               className="relative ml-1"
               src={slide}

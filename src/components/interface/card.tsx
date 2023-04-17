@@ -1,12 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationIcon from '../../../public/icons/location.svg';
-import {EstateI} from '@/models/Estate';
-
-let dollarUS = Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-});
+import {dollarUS} from '@/utils/number-format';
 
 interface CardProps {
   id: string;

@@ -1,9 +1,9 @@
 const cloudinaryClient = require('cloudinary').v2;
 
 cloudinaryClient.config({
-  cloud_name: 'cotidiano',
-  api_key: '982137587145672',
-  api_secret: 'WndCsHp4YL9mNqosE-9pDrYzBlw',
+  cloud_name: '',
+  api_key: '',
+  api_secret: '',
   secure: true,
 });
 
