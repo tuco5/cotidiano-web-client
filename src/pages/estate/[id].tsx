@@ -16,8 +16,6 @@ interface EstatePageProps {
 }
 
 export default function DetailEstatePage({data}: EstatePageProps) {
-  console.log(data);
-
   return (
     <div className="flex min-h-screen w-full bg-gray-800 text-white">
       <div className="mt-14 flex w-full flex-col items-center">

@@ -15,7 +15,7 @@ interface EstatePageProps {
 
 export default function EstatePage({data}: EstatePageProps) {
   const {width} = useWindowSize();
-  console.log(data);
+
   const sliderSettings = {
     dots: true,
     infinite: true,
